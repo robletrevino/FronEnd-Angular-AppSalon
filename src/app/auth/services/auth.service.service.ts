@@ -46,7 +46,5 @@ export class AuthServiceService {
 
   }
 }
-function computer(arg0: () => user | null) {
-  throw new Error('Function not implemented.');
-}
+
 
