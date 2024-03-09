@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import { AuthServiceService } from '../../../auth/services/auth.service.service';
 
 @Component({
   selector: 'app-dashboard-layout',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard-layout.component.css'
 })
 export class DashboardLayoutComponent {
+  private AuthService = inject(AuthServiceService)
+  public user = computed(() => this.AuthService.currentUser());
 
+
+/*   get user(){
+    return this.AuthService.currentUser();
+  } */
 }

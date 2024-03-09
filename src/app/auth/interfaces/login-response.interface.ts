@@ -1,12 +1,11 @@
-export interface user {
-  nombre: string;
-  correo: string;
-  clave:  string;
-  Uguid:  string;
+export interface User {
+  Nombre: string;
 }
 
 
 export interface LoginResponse {
-  User: user;
-  Activo: boolean;
+  access_Token:string;
+  expires_Date:string;
+  user: User;
+  estatus:string
 }
